@@ -146,5 +146,10 @@ class DoublyLinkedList:
         # Loop through nodes via node.next
         # If node.value is higher, update max
         # return max
-
-        pass
+        max = self.head.value
+        current_node = self.head.next
+        while current_node:
+            if current_node.value > max:
+                max = current_node.value
+            current_node = current_node.next
+        return max
